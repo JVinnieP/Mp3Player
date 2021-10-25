@@ -20,7 +20,7 @@ Window.size = (400, 600)
 
 class NovakApp(MDApp):
     def build(self):
-        layout = MDRelativeLayout(md_bg_color = [0, 0.5, 1, 1])
+        layout = MDRelativeLayout(md_bg_color = [0, 0, 0, 0])
 
         self.music_dir = '/Users/usuario/PycharmProjects/venv/Mp3_project'
         self.music_files = os.listdir(self.music_dir)
@@ -32,9 +32,10 @@ class NovakApp(MDApp):
 
         print(self.song_list)
 
-        self.songLabel = Label(pos_hint={'center_x':0.5, 'center_y':0.93},
+        self.songLabel = Label(pos_hint={'center_x':0.5, 'center_y':0.92},
                                 size_hint = (1,1),
-                               font_size = 24)
+                               font_size = 25,
+                                color = '#000000')
 
         self.albumimage = Image(pos_hint = {'center_x':0.5, 'center_y':0.55},
                                 size_hint = (1, 0.90))
